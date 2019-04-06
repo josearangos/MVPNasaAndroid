@@ -5,7 +5,7 @@ with the aim to learn about Model-View-Presenter architecture, the next project 
 
 # Libraries used
 
-# # Retrofit for Request to of API NASA https://square.github.io/retrofit/
-Butterknife for injection of dependencies  http://jakewharton.github.io/butterknife/
-Glide for load Image from URL https://github.com/bumptech/glide
-PhotoView for application zoom in the Images https://github.com/chrisbanes/PhotoView
+1. Retrofit for Request to of API NASA https://square.github.io/retrofit/
+2. Butterknife for injection of dependencies  http://jakewharton.github.io/butterknife/
+3. Glide for load Image from URL https://github.com/bumptech/glide
+4. PhotoView for application zoom in the Images https://github.com/chrisbanes/PhotoView
