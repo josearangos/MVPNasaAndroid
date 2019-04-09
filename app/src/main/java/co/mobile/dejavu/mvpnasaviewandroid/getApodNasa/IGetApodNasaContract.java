@@ -9,6 +9,7 @@ public interface IGetApodNasaContract {
         void displayApodNasa(Apod apod);
         void displayLoader(boolean loader);
         void initializeView();
+        void displayError(String error);
     }
 
     interface IPresenter{
@@ -17,13 +18,13 @@ public interface IGetApodNasaContract {
     }
 
     interface IInteractor{
-        Apod getApodNasa();
+        void getApodNasa();
     }
 
-
-
-
-
+    interface CompleteListener {
+        void onSuccess(Apod apod);
+        void onError(String error);
+    }
 
 
 

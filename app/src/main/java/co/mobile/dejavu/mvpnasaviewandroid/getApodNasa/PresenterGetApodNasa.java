@@ -2,7 +2,7 @@ package co.mobile.dejavu.mvpnasaviewandroid.getApodNasa;
 
 import co.mobile.dejavu.mvpnasaviewandroid.getApodNasa.Model.Apod;
 
-public class PresenterGetApodNasa implements IGetApodNasaContract.IPresenter {
+public class PresenterGetApodNasa implements IGetApodNasaContract.IPresenter ,IGetApodNasaContract.CompleteListener{
 
     private IGetApodNasaContract.IView view;
     private IGetApodNasaContract.IInteractor interactor;
@@ -21,17 +21,21 @@ public class PresenterGetApodNasa implements IGetApodNasaContract.IPresenter {
     public void getApodNasa() {
         if(view != null) {
             view.displayLoader(true);
-            Apod apod = interactor.getApodNasa();
-            if(apod != null){
-                view.displayApodNasa(apod);
-            }else{
-
-            }
-            view.displayLoader(false);
-
-        }
-
+            interactor.getApodNasa();
+         }
     }
 
+    @Override
+    public void onSuccess(Apod apod) {
+        view.displayLoader(false);
+        view.displayApodNasa(apod);
+    }
 
+    @Override
+    public void onError(String error) {
+        view.displayLoader(false);
+        view.displayError(error);
+
+
+    }
 }

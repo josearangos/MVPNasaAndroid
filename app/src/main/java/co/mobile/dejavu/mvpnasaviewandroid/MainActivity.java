@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -42,6 +43,11 @@ public class MainActivity extends AppCompatActivity implements IGetApodNasaContr
         this.date = (TextView) findViewById(R.id.date);
         this.imageView = (ImageView) findViewById(R.id.imageView);
         this.copyright = (TextView) findViewById(R.id.copyright);
+    }
+
+    @Override
+    public void displayError(String error) {
+        Toast.makeText(getApplicationContext(),error,Toast.LENGTH_SHORT).show();
     }
 
 
