@@ -13,3 +13,9 @@ with the aim to learn about Model-View-Presenter architecture, the next project 
 2. Butterknife for injection of dependencies  http://jakewharton.github.io/butterknife/
 3. Glide for load Image from URL https://github.com/bumptech/glide
 4. PhotoView for application zoom in the Images https://github.com/chrisbanes/PhotoView
+
+This is the Result
+
+# Screenshot
+
+![alt text](screenshot.png)
