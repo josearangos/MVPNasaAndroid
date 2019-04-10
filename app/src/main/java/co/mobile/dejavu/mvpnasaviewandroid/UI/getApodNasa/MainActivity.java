@@ -1,4 +1,4 @@
-package co.mobile.dejavu.mvpnasaviewandroid;
+package co.mobile.dejavu.mvpnasaviewandroid.UI.getApodNasa;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,9 +10,8 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
-import co.mobile.dejavu.mvpnasaviewandroid.getApodNasa.IGetApodNasaContract;
-import co.mobile.dejavu.mvpnasaviewandroid.getApodNasa.Model.Apod;
-import co.mobile.dejavu.mvpnasaviewandroid.getApodNasa.PresenterGetApodNasa;
+import co.mobile.dejavu.mvpnasaviewandroid.R;
+import co.mobile.dejavu.mvpnasaviewandroid.Domain.Models.Apod;
 
 public class MainActivity extends AppCompatActivity implements IGetApodNasaContract.IView {
 
@@ -30,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements IGetApodNasaContr
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initializeView();
-        presenter= new PresenterGetApodNasa(this);
+        presenter= new GetApodNasaPresenter(this);
         presenter.getApodNasa();
     }
 

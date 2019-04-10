@@ -1,21 +1,21 @@
-package co.mobile.dejavu.mvpnasaviewandroid.getApodNasa;
+package co.mobile.dejavu.mvpnasaviewandroid.UI.getApodNasa;
 
 
-import co.mobile.dejavu.mvpnasaviewandroid.getApodNasa.InterfacesAPI.INasaApi;
-import co.mobile.dejavu.mvpnasaviewandroid.getApodNasa.Model.Apod;
+import co.mobile.dejavu.mvpnasaviewandroid.Domain.Rest.INasaApi;
+import co.mobile.dejavu.mvpnasaviewandroid.Domain.Models.Apod;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class InteractorGetApodNasa implements  IGetApodNasaContract.IInteractor{
+public class GetApodNasaModel implements  IGetApodNasaContract.IInteractor{
 
     private IGetApodNasaContract.CompleteListener listener;
     private Retrofit retrofit;
 
 
-    public InteractorGetApodNasa(IGetApodNasaContract.CompleteListener listener) {
+    public GetApodNasaModel(IGetApodNasaContract.CompleteListener listener) {
         this.listener = listener;
         retrofit = new Retrofit.Builder()
                 .baseUrl("https://api.nasa.gov/planetary/")

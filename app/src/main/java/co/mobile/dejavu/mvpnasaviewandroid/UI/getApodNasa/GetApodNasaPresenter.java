@@ -1,15 +1,15 @@
-package co.mobile.dejavu.mvpnasaviewandroid.getApodNasa;
+package co.mobile.dejavu.mvpnasaviewandroid.UI.getApodNasa;
 
-import co.mobile.dejavu.mvpnasaviewandroid.getApodNasa.Model.Apod;
+import co.mobile.dejavu.mvpnasaviewandroid.Domain.Models.Apod;
 
-public class PresenterGetApodNasa implements IGetApodNasaContract.IPresenter ,IGetApodNasaContract.CompleteListener{
+public class GetApodNasaPresenter implements IGetApodNasaContract.IPresenter ,IGetApodNasaContract.CompleteListener{
 
     private IGetApodNasaContract.IView view;
     private IGetApodNasaContract.IInteractor interactor;
 
-    public PresenterGetApodNasa(IGetApodNasaContract.IView view) {
+    public GetApodNasaPresenter(IGetApodNasaContract.IView view) {
         this.view = view;
-        this.interactor= new InteractorGetApodNasa(this);
+        this.interactor= new GetApodNasaModel(this);
     }
 
     @Override

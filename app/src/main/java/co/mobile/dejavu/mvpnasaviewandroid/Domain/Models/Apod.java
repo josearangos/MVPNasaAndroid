@@ -1,4 +1,4 @@
-package co.mobile.dejavu.mvpnasaviewandroid.getApodNasa.Model;
+package co.mobile.dejavu.mvpnasaviewandroid.Domain.Models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

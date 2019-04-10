@@ -1,6 +1,6 @@
-package co.mobile.dejavu.mvpnasaviewandroid.getApodNasa;
+package co.mobile.dejavu.mvpnasaviewandroid.UI.getApodNasa;
 
-import co.mobile.dejavu.mvpnasaviewandroid.getApodNasa.Model.Apod;
+import co.mobile.dejavu.mvpnasaviewandroid.Domain.Models.Apod;
 
 public interface IGetApodNasaContract {
 
